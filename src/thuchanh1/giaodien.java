@@ -51,7 +51,8 @@ public class giaodien extends javax.swing.JFrame {
         txtNhapLai = new javax.swing.JButton();
         txtSosanh = new javax.swing.JButton();
         txtHenhiphan = new javax.swing.JButton();
-        txtThapphan = new javax.swing.JButton();
+        txtHebatphan = new javax.swing.JButton();
+        txtHethaplucphan = new javax.swing.JButton();
 
         jMenu3.setText("jMenu3");
 
@@ -117,7 +118,7 @@ public class giaodien extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addGap(33, 33, 33)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(23, 23, 23))
         );
@@ -223,10 +224,25 @@ public class giaodien extends javax.swing.JFrame {
             }
         });
 
-        txtThapphan.setBackground(new java.awt.Color(255, 102, 102));
-        txtThapphan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        txtThapphan.setForeground(new java.awt.Color(255, 255, 255));
-        txtThapphan.setText("Hệ thập phân");
+        txtHebatphan.setBackground(new java.awt.Color(255, 102, 102));
+        txtHebatphan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtHebatphan.setForeground(new java.awt.Color(255, 255, 255));
+        txtHebatphan.setText("Hệ bát phân");
+        txtHebatphan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHebatphanActionPerformed(evt);
+            }
+        });
+
+        txtHethaplucphan.setBackground(new java.awt.Color(255, 102, 102));
+        txtHethaplucphan.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        txtHethaplucphan.setForeground(new java.awt.Color(255, 255, 255));
+        txtHethaplucphan.setText("Hệ thập lục phân");
+        txtHethaplucphan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtHethaplucphanActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -234,13 +250,16 @@ public class giaodien extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(txtNhapLai, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtHethaplucphan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtNhapLai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(29, 29, 29)
                 .addComponent(txtSosanh, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(txtHenhiphan)
-                .addGap(29, 29, 29)
-                .addComponent(txtThapphan, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(txtHebatphan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,8 +269,10 @@ public class giaodien extends javax.swing.JFrame {
                     .addComponent(txtNhapLai)
                     .addComponent(txtSosanh)
                     .addComponent(txtHenhiphan)
-                    .addComponent(txtThapphan))
-                .addContainerGap(54, Short.MAX_VALUE))
+                    .addComponent(txtHebatphan))
+                .addGap(18, 18, 18)
+                .addComponent(txtHethaplucphan)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -266,8 +287,8 @@ public class giaodien extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 526, Short.MAX_VALUE))
-                .addContainerGap(9, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -361,6 +382,26 @@ public class giaodien extends javax.swing.JFrame {
         txtKq.setText(" sang he nhi phan : " + so1 + " va "+so2 );
     }//GEN-LAST:event_txtHenhiphanActionPerformed
 
+    private void txtHebatphanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHebatphanActionPerformed
+        // TODO add your handling code here:
+        double num1 = Double.parseDouble(txta.getText());
+        double num2 = Double.parseDouble(txtb.getText());
+        String so1Octal = Integer.toOctalString((int) num1);
+        String so2Octal = Integer.toOctalString((int) num2);
+
+        txtKq.setText("sang he bat phan: " + so1Octal + " và " + so2Octal);
+    }//GEN-LAST:event_txtHebatphanActionPerformed
+
+    private void txtHethaplucphanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHethaplucphanActionPerformed
+        // TODO add your handling code here:
+        double num1 = Double.parseDouble(txta.getText());
+        double num2 = Double.parseDouble(txtb.getText());
+        String so1Hex = Integer.toHexString((int) num1);
+        String so2Hex = Integer.toHexString((int) num2);
+
+        txtKq.setText("sang he thap luc phan: " + so1Hex.toUpperCase() + " và " + so2Hex.toUpperCase());
+    }//GEN-LAST:event_txtHethaplucphanActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -414,11 +455,12 @@ public class giaodien extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton txtHebatphan;
     private javax.swing.JButton txtHenhiphan;
+    private javax.swing.JButton txtHethaplucphan;
     private javax.swing.JLabel txtKq;
     private javax.swing.JButton txtNhapLai;
     private javax.swing.JButton txtSosanh;
-    private javax.swing.JButton txtThapphan;
     private javax.swing.JTextField txta;
     private javax.swing.JTextField txtb;
     // End of variables declaration//GEN-END:variables
