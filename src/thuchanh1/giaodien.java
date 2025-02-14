@@ -309,13 +309,30 @@ public class giaodien extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
-        double cong = 0;
+//        double num1 = Double.parseDouble(txta.getText());
+//        double num2 = Double.parseDouble(txtb.getText());
+//        double cong = 0;
+//
+//        cong = num1 + num2;
+//
+//        txtKq.setText(cong + ""); 
+           try {
+        // Xóa thông báo lỗi trước khi kiểm tra
+            txtKq.setText(""); 
 
-        cong = num1 + num2;
+            // Lấy dữ liệu từ ô nhập và chuyển sang số
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+        
+        // Tính tổng
+            double cong = num1 + num2;
 
-        txtKq.setText(cong + ""); // Hiển thị kết quả lên txtKq
+        // Hiển thị kết quả lên txtKq
+            txtKq.setText(String.valueOf(cong));
+        } catch (NumberFormatException e) {
+        // Hiển thị thông báo lỗi trên lblError
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
