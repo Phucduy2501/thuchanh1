@@ -309,63 +309,62 @@ public class giaodien extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-//        double num1 = Double.parseDouble(txta.getText());
-//        double num2 = Double.parseDouble(txtb.getText());
-//        double cong = 0;
-//
-//        cong = num1 + num2;
-//
-//        txtKq.setText(cong + ""); 
-           try {
-        // Xóa thông báo lỗi trước khi kiểm tra
+        try {
             txtKq.setText(""); 
-
-            // Lấy dữ liệu từ ô nhập và chuyển sang số
             double num1 = Double.parseDouble(txta.getText());
             double num2 = Double.parseDouble(txtb.getText());
-        
-        // Tính tổng
             double cong = num1 + num2;
-
-        // Hiển thị kết quả lên txtKq
             txtKq.setText(String.valueOf(cong));
-        } catch (NumberFormatException e) {
-        // Hiển thị thông báo lỗi trên lblError
+            } catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
-    }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
-        double tru = 0;
-
-        tru = num1 - num2;
-
-        txtKq.setText(tru + "");
+        try{
+            txtKq.setText("");
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+            double tru = 0;
+            tru = num1 - num2;
+            txtKq.setText(tru + "");}
+        catch (NumberFormatException e) {
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
-        double nhan = 0;
+        try{
+            txtKq.setText("");
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+            double nhan = 0;
 
-        nhan = num1 * num2;
+            nhan = num1 * num2;
 
-        txtKq.setText(nhan + "");
+            txtKq.setText(nhan + "");}
+        catch (NumberFormatException e) {
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
-        double chia = 0;
+        try{
+            txtKq.setText("");
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+            double chia = 0;
 
-        chia = num1 / num2;
+            chia = num1 / num2;
 
-        txtKq.setText(chia + "");
+            txtKq.setText(chia + "");
+        }        
+        catch (NumberFormatException e) {
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void txtNhapLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNhapLaiActionPerformed
@@ -377,46 +376,70 @@ public class giaodien extends javax.swing.JFrame {
 
     private void txtSosanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSosanhActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
-        if(num1 > num2){
-            txtKq.setText("số a lớn hơn số b");
-        }else if(num1 < num2){
-            txtKq.setText("số a nhỏ hơn số b");
-        } else{
-            txtKq.setText("hai số bằng nhau");
+        try{
+            txtKq.setText("");
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+            if(num1 > num2){
+                txtKq.setText("số a lớn hơn số b");
+            }else if(num1 < num2){
+                txtKq.setText("số a nhỏ hơn số b");
+            } else{
+                txtKq.setText("hai số bằng nhau");
+            }
+        }      
+        catch (NumberFormatException e) {
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
         }
     }//GEN-LAST:event_txtSosanhActionPerformed
 
     private void txtHenhiphanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHenhiphanActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
+        try{
+            txtKq.setText("");
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+            
+            String so1 = Integer.toBinaryString((int)num1);
+            String so2 = Integer.toBinaryString((int)num2);
         
-        String so1 = Integer.toBinaryString((int)num1);
-        String so2 = Integer.toBinaryString((int)num2);
-        
-        txtKq.setText(" sang he nhi phan : " + so1 + " va "+so2 );
+            txtKq.setText(" sang he nhi phan : " + so1 + " va "+so2 );
+        }   
+        catch (NumberFormatException e) {
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
+        }
     }//GEN-LAST:event_txtHenhiphanActionPerformed
 
     private void txtHebatphanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHebatphanActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
-        String so1Octal = Integer.toOctalString((int) num1);
-        String so2Octal = Integer.toOctalString((int) num2);
+        try{
+            txtKq.setText("");
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+            String so1Octal = Integer.toOctalString((int) num1);
+            String so2Octal = Integer.toOctalString((int) num2);
 
-        txtKq.setText("sang he bat phan: " + so1Octal + " và " + so2Octal);
+            txtKq.setText("sang he bat phan: " + so1Octal + " và " + so2Octal);
+        }
+        catch (NumberFormatException e) {
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
+        }
     }//GEN-LAST:event_txtHebatphanActionPerformed
 
     private void txtHethaplucphanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHethaplucphanActionPerformed
         // TODO add your handling code here:
-        double num1 = Double.parseDouble(txta.getText());
-        double num2 = Double.parseDouble(txtb.getText());
-        String so1Hex = Integer.toHexString((int) num1);
-        String so2Hex = Integer.toHexString((int) num2);
+        try{
+            txtKq.setText("");
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+            String so1Hex = Integer.toHexString((int) num1);
+            String so2Hex = Integer.toHexString((int) num2);
 
-        txtKq.setText("sang he thap luc phan: " + so1Hex.toUpperCase() + " và " + so2Hex.toUpperCase());
+            txtKq.setText("sang he thap luc phan: " + so1Hex.toUpperCase() + " và " + so2Hex.toUpperCase());
+        }
+        catch (NumberFormatException e) {
+            txtKq.setText("Vui lòng nhập số hợp lệ!");
+        }
     }//GEN-LAST:event_txtHethaplucphanActionPerformed
 
     /**
