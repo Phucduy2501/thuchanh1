@@ -4,6 +4,13 @@
  */
 package thuchanh1;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author ACER
@@ -53,6 +60,7 @@ public class giaodien extends javax.swing.JFrame {
         txtHenhiphan = new javax.swing.JButton();
         txtHebatphan = new javax.swing.JButton();
         txtHethaplucphan = new javax.swing.JButton();
+        btnXuatfile = new javax.swing.JButton();
 
         jMenu3.setText("jMenu3");
 
@@ -161,7 +169,7 @@ public class giaodien extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,34 +252,50 @@ public class giaodien extends javax.swing.JFrame {
             }
         });
 
+        btnXuatfile.setBackground(new java.awt.Color(255, 102, 102));
+        btnXuatfile.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnXuatfile.setForeground(new java.awt.Color(255, 255, 255));
+        btnXuatfile.setText("Xuất file");
+        btnXuatfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXuatfileActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtHethaplucphan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtNhapLai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29)
-                .addComponent(txtSosanh, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(txtHenhiphan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addComponent(txtHebatphan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(txtNhapLai, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtHethaplucphan, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtHebatphan, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(txtSosanh, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(txtHenhiphan, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
+                .addComponent(btnXuatfile)
+                .addGap(101, 101, 101))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNhapLai)
                     .addComponent(txtSosanh)
                     .addComponent(txtHenhiphan)
-                    .addComponent(txtHebatphan))
+                    .addComponent(btnXuatfile))
                 .addGap(18, 18, 18)
-                .addComponent(txtHethaplucphan)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtHethaplucphan)
+                    .addComponent(txtNhapLai)
+                    .addComponent(txtHebatphan))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -287,7 +311,7 @@ public class giaodien extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74))
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -442,6 +466,60 @@ public class giaodien extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtHethaplucphanActionPerformed
 
+    private void btnXuatfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXuatfileActionPerformed
+        // Đường dẫn file xuất kết quả
+    String filePath = "D:\\File\\ketqua_phep_tinh.txt";
+    File file = new File(filePath);
+
+    try {
+        FileWriter fw = new FileWriter(file);
+        BufferedWriter bw = new BufferedWriter(fw);
+
+        // Lấy giá trị từ ô nhập liệu
+        try {
+            double num1 = Double.parseDouble(txta.getText());
+            double num2 = Double.parseDouble(txtb.getText());
+
+            // Thực hiện các phép toán
+            double sum = num1 + num2;
+            double difference = num1 - num2;
+            double product = num1 * num2;
+            double quotient = (num2 != 0) ? (num1 / num2) : Double.NaN; // Kiểm tra chia cho 0
+
+            // Ghi kết quả vào file
+            bw.write("Số thứ nhất: " + num1);
+            bw.newLine();
+            bw.write("Số thứ hai: " + num2);
+            bw.newLine();
+            bw.write("Tổng: " + sum);
+            bw.newLine();
+            bw.write("Hiệu: " + difference);
+            bw.newLine();
+            bw.write("Tích: " + product);
+            bw.newLine();
+            if (num2 != 0) {
+                bw.write("Thương: " + quotient);
+                bw.newLine();
+            } else {
+                bw.write("Không thể chia cho 0!");
+                bw.newLine();
+            }
+
+            bw.write("================================");
+            bw.newLine();
+        } catch (NumberFormatException e) {
+            bw.write("Lỗi: Vui lòng nhập số hợp lệ!");
+            bw.newLine();
+        }
+
+        // Đóng file
+        bw.close();
+        fw.close();
+    } catch (IOException ex) {
+        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, ex);
+    }
+    }//GEN-LAST:event_btnXuatfileActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -478,6 +556,7 @@ public class giaodien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnXuatfile;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
