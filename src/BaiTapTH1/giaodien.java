@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package thuchanh1;
+package BaiTapTH1;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -18,9 +18,6 @@ import java.util.logging.Logger;
 public class giaodien extends javax.swing.JFrame {
 
     
-    /**
-     * Creates new form giaodien
-     */
     public giaodien() {
         initComponents();
         setLocationRelativeTo(null);
@@ -61,6 +58,8 @@ public class giaodien extends javax.swing.JFrame {
         txtHebatphan = new javax.swing.JButton();
         txtHethaplucphan = new javax.swing.JButton();
         btnXuatfile = new javax.swing.JButton();
+        btnBinhPhuong = new javax.swing.JButton();
+        btbLapPhuong = new javax.swing.JButton();
 
         jMenu3.setText("jMenu3");
 
@@ -126,7 +125,7 @@ public class giaodien extends javax.swing.JFrame {
                 .addComponent(jButton2)
                 .addGap(33, 33, 33)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(23, 23, 23))
         );
@@ -169,7 +168,7 @@ public class giaodien extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,26 +261,48 @@ public class giaodien extends javax.swing.JFrame {
             }
         });
 
+        btnBinhPhuong.setBackground(new java.awt.Color(255, 102, 102));
+        btnBinhPhuong.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnBinhPhuong.setForeground(new java.awt.Color(255, 255, 255));
+        btnBinhPhuong.setText("Bình Phương");
+        btnBinhPhuong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBinhPhuongActionPerformed(evt);
+            }
+        });
+
+        btbLapPhuong.setBackground(new java.awt.Color(255, 102, 102));
+        btbLapPhuong.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btbLapPhuong.setForeground(new java.awt.Color(255, 255, 255));
+        btbLapPhuong.setText("Lập Phương");
+        btbLapPhuong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btbLapPhuongActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtNhapLai, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtHethaplucphan, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(txtHebatphan, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(txtSosanh, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(txtHenhiphan, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
-                .addComponent(btnXuatfile)
-                .addGap(101, 101, 101))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNhapLai, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHethaplucphan, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtSosanh, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtHebatphan, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(61, 61, 61)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBinhPhuong)
+                    .addComponent(txtHenhiphan, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btbLapPhuong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnXuatfile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(111, 111, 111))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,13 +310,15 @@ public class giaodien extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtSosanh)
-                    .addComponent(txtHenhiphan)
-                    .addComponent(btnXuatfile))
+                    .addComponent(btnBinhPhuong)
+                    .addComponent(btbLapPhuong)
+                    .addComponent(txtNhapLai))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHethaplucphan)
-                    .addComponent(txtNhapLai)
-                    .addComponent(txtHebatphan))
+                    .addComponent(txtHebatphan)
+                    .addComponent(txtHenhiphan)
+                    .addComponent(btnXuatfile))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
@@ -310,9 +333,11 @@ public class giaodien extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(74, 74, 74))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 6, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -321,9 +346,9 @@ public class giaodien extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -520,6 +545,38 @@ public class giaodien extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_btnXuatfileActionPerformed
 
+    private void btnBinhPhuongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBinhPhuongActionPerformed
+        // TODO add your handling code here:
+        try {
+    txtKq.setText("");
+    double num1 = Double.parseDouble(txta.getText());
+    double num2 = Double.parseDouble(txtb.getText());
+
+    double square1 = Math.pow(num1, 2);
+    double square2 = Math.pow(num2, 2);
+
+    txtKq.setText("Bình phương: " + square1 + " và " + square2);
+} catch (NumberFormatException e) {
+    txtKq.setText("Vui lòng nhập số hợp lệ!");
+}
+    }//GEN-LAST:event_btnBinhPhuongActionPerformed
+
+    private void btbLapPhuongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbLapPhuongActionPerformed
+            // TODO add your handling code here:
+            try {
+    txtKq.setText("");
+    double num1 = Double.parseDouble(txta.getText());
+    double num2 = Double.parseDouble(txtb.getText());
+
+    double cube1 = Math.pow(num1, 3);
+    double cube2 = Math.pow(num2, 3);
+
+    txtKq.setText("Lập phương: " + cube1 + " và " + cube2);
+} catch (NumberFormatException e) {
+    txtKq.setText("Vui lòng nhập số hợp lệ!");
+}
+    }//GEN-LAST:event_btbLapPhuongActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -556,6 +613,8 @@ public class giaodien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btbLapPhuong;
+    private javax.swing.JButton btnBinhPhuong;
     private javax.swing.JButton btnXuatfile;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
