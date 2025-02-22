@@ -31,14 +31,14 @@ public class FormChinh extends javax.swing.JFrame {
         jMenuBar5 = new javax.swing.JMenuBar();
         jMenu9 = new javax.swing.JMenu();
         jMenu10 = new javax.swing.JMenu();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu11 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        btnBacNhat = new javax.swing.JMenuItem();
+        btnBacHai = new javax.swing.JMenuItem();
         jMenu12 = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
@@ -71,6 +71,9 @@ public class FormChinh extends javax.swing.JFrame {
         jMenu10.setText("Edit");
         jMenuBar5.add(jMenu10);
 
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu3.setText("Hệ thống");
@@ -82,7 +85,7 @@ public class FormChinh extends javax.swing.JFrame {
 
         jMenu11.setText("Chức năng");
 
-        jMenuItem5.setText("giaodien");
+        jMenuItem5.setText("Phép Tính");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -90,29 +93,21 @@ public class FormChinh extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem5);
 
-        jMenuItem6.setText("Phép trừ");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        btnBacNhat.setText("Bậc Nhất");
+        btnBacNhat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                btnBacNhatActionPerformed(evt);
             }
         });
-        jMenu11.add(jMenuItem6);
+        jMenu11.add(btnBacNhat);
 
-        jMenuItem7.setText("Phép nhân");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        btnBacHai.setText("Bậc Hai");
+        btnBacHai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                btnBacHaiActionPerformed(evt);
             }
         });
-        jMenu11.add(jMenuItem7);
-
-        jMenuItem8.setText("Phép chia");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
-            }
-        });
-        jMenu11.add(jMenuItem8);
+        jMenu11.add(btnBacHai);
 
         jMenuBar1.add(jMenu11);
 
@@ -141,20 +136,19 @@ public class FormChinh extends javax.swing.JFrame {
         frm.setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void btnBacNhatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBacNhatActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+//        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        jfrbacnhat frm = new jfrbacnhat();
+        frm.setVisible(true);
+    }//GEN-LAST:event_btnBacNhatActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void btnBacHaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBacHaiActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
-
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+//        JOptionPane.showMessageDialog(null, "Chức năng này chưa thực hiện được", "THÔNG BÁO", 1);
+        jfrbachai frm = new jfrbachai();
+        frm.setVisible(true);
+    }//GEN-LAST:event_btnBacHaiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,6 +187,9 @@ public class FormChinh extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem btnBacHai;
+    private javax.swing.JMenuItem btnBacNhat;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
@@ -214,8 +211,5 @@ public class FormChinh extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     // End of variables declaration//GEN-END:variables
 }
