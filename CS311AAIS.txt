@@ -1,11 +1,11 @@
-sang hệ thập lục phân: 4 và 3
-sang hệ bát phân: 4 và 3
-số a lớn hơn số b
-Bình phương: 16.0 và 9.0
- sang hệ nhị phân : 100 và 11
-Lập phương: 64.0 và 27.0
-phép cộng : 7.0
-phép trừ : 1.0
+số a nhỏ hơn số b
+sang hệ thập lục phân: 3 và 4
+sang hệ bát phân: 3 và 4
+ sang hệ nhị phân : 11 và 100
+Bình phương: 9.0 và 16.0
+Lập phương: 27.0 và 64.0
+phép chia: 0.75
 phép nhân: 12.0
-phép chia: 1.3333333333333333
+phép trừ : -1.0
+phép Cộng: 7.0
 
