@@ -62,18 +62,39 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
                   <Component id="jPanel2" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="317" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+=======
+                  <Component id="jPanel3" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
               <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
               <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+=======
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel1" min="-2" pref="155" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
@@ -86,13 +107,20 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="38" max="-2" attributes="0"/>
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="17" max="32767" attributes="0"/>
               <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+=======
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -103,7 +131,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="C&#x1ed8;NG TR&#x1eea; NH&#xc2;N CHIA"/>
+        <Property name="text" type="java.lang.String" value="PH&#xc9;P T&#xcd;NH"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
@@ -113,6 +141,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
                   <Component id="jButton1" min="-2" pref="100" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" pref="100" max="-2" attributes="0"/>
@@ -121,6 +150,16 @@
                   <EmptySpace pref="43" max="32767" attributes="0"/>
                   <Component id="jButton4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+=======
+                  <Component id="jButton1" min="-2" pref="134" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButton2" min="-2" pref="129" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButton3" min="-2" pref="127" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jButton4" min="-2" pref="132" max="-2" attributes="0"/>
+                  <EmptySpace pref="59" max="32767" attributes="0"/>
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
               </Group>
           </Group>
         </DimensionLayout>
@@ -239,7 +278,7 @@
                           <Component id="jLabel5" min="-2" pref="127" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="206" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -331,6 +370,11 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="cc" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -338,25 +382,44 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
                       <Component id="txtNhapLai" max="32767" attributes="0"/>
                       <Component id="txtHethaplucphan" pref="133" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="49" max="32767" attributes="0"/>
+=======
+                      <Component id="txtHethaplucphan" pref="133" max="32767" attributes="0"/>
+                      <Component id="txtNhapLai" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="txtHebatphan" pref="126" max="32767" attributes="0"/>
                       <Component id="txtSosanh" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btnBinhPhuong" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtHenhiphan" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txtHenhiphan" max="32767" attributes="0"/>
+                      <Component id="btnBinhPhuong" pref="106" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="btbLapPhuong" max="32767" attributes="0"/>
                       <Component id="btnQuayLai" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+=======
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="btbLapPhuong" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="btnGhifile" min="-2" pref="95" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="btnXuatfile" min="-2" pref="96" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
               </Group>
           </Group>
         </DimensionLayout>
@@ -369,6 +432,7 @@
                       <Component id="btnBinhPhuong" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btbLapPhuong" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtNhapLai" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnGhifile" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -502,7 +566,11 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btbLapPhuongActionPerformed"/>
           </Events>
         </Component>
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
         <Component class="javax.swing.JButton" name="btnQuayLai">
+=======
+        <Component class="javax.swing.JButton" name="btnGhifile">
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -513,10 +581,17 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.form
             <Property name="text" type="java.lang.String" value="Quay l&#x1ea1;i"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnQuayLaiActionPerformed"/>
+=======
+            <Property name="text" type="java.lang.String" value="ghi file"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGhifileActionPerformed"/>
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.form
           </Events>
         </Component>
       </SubComponents>

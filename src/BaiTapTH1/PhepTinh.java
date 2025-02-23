@@ -10,6 +10,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.ArrayList;
+import java.awt.Desktop;
+
+
+
 
 /**
  *
@@ -17,10 +22,24 @@ import java.util.logging.Logger;
  */
 public class PhepTinh extends javax.swing.JFrame {
 
+    ArrayList<PhepTinh> arr = new ArrayList<>();
+    private StringBuilder history = new StringBuilder();
     
     public PhepTinh() {
         initComponents();
         setLocationRelativeTo(null);
+    }
+    
+    void ghiFile(String tenFile){
+        try {
+            BufferedWriter bw=new BufferedWriter(new FileWriter(tenFile));
+            for (PhepTinh nv : arr) {
+                bw.write(nv.toString());
+                bw.newLine();
+            }
+            bw.close();
+        } catch (Exception e) {
+        }
     }
 
     /**
@@ -59,7 +78,11 @@ public class PhepTinh extends javax.swing.JFrame {
         txtHethaplucphan = new javax.swing.JButton();
         btnBinhPhuong = new javax.swing.JButton();
         btbLapPhuong = new javax.swing.JButton();
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.java
         btnQuayLai = new javax.swing.JButton();
+=======
+        btnGhifile = new javax.swing.JButton();
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
 
         jMenu3.setText("jMenu3");
 
@@ -72,7 +95,7 @@ public class PhepTinh extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("CỘNG TRỪ NHÂN CHIA");
+        jLabel1.setText("PHÉP TÍNH");
 
         jButton1.setBackground(new java.awt.Color(255, 102, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -120,6 +143,7 @@ public class PhepTinh extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.java
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -128,6 +152,16 @@ public class PhepTinh extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(41, 41, 41))
+=======
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,7 +213,7 @@ public class PhepTinh extends javax.swing.JFrame {
                             .addComponent(txtb, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,6 +234,8 @@ public class PhepTinh extends javax.swing.JFrame {
                         .addComponent(jLabel7)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
+
+        jPanel3.setBackground(new java.awt.Color(204, 255, 255));
 
         txtNhapLai.setBackground(new java.awt.Color(255, 102, 102));
         txtNhapLai.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -271,6 +307,7 @@ public class PhepTinh extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.java
         btnQuayLai.setBackground(new java.awt.Color(255, 102, 102));
         btnQuayLai.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnQuayLai.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,6 +315,15 @@ public class PhepTinh extends javax.swing.JFrame {
         btnQuayLai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnQuayLaiActionPerformed(evt);
+=======
+        btnGhifile.setBackground(new java.awt.Color(255, 102, 102));
+        btnGhifile.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnGhifile.setForeground(new java.awt.Color(255, 255, 255));
+        btnGhifile.setText("ghi file");
+        btnGhifile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGhifileActionPerformed(evt);
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
             }
         });
 
@@ -287,6 +333,7 @@ public class PhepTinh extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.java
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtNhapLai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtHethaplucphan, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE))
@@ -303,6 +350,27 @@ public class PhepTinh extends javax.swing.JFrame {
                     .addComponent(btbLapPhuong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnQuayLai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(113, 113, 113))
+=======
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtHethaplucphan, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                    .addComponent(txtNhapLai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtHebatphan, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                    .addComponent(txtSosanh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtHenhiphan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBinhPhuong, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(btbLapPhuong)
+                        .addGap(51, 51, 51)
+                        .addComponent(btnGhifile, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnXuatfile, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,7 +380,8 @@ public class PhepTinh extends javax.swing.JFrame {
                     .addComponent(txtSosanh)
                     .addComponent(btnBinhPhuong)
                     .addComponent(btbLapPhuong)
-                    .addComponent(txtNhapLai))
+                    .addComponent(txtNhapLai)
+                    .addComponent(btnGhifile))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtHethaplucphan)
@@ -329,6 +398,7 @@ public class PhepTinh extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.java
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(170, 170, 170)
@@ -341,19 +411,42 @@ public class PhepTinh extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+=======
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 25, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(300, 300, 300))))
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.java
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         pack();
@@ -366,7 +459,9 @@ public class PhepTinh extends javax.swing.JFrame {
             double num1 = Double.parseDouble(txta.getText());
             double num2 = Double.parseDouble(txtb.getText());
             double cong = num1 + num2;
-            txtKq.setText(String.valueOf(cong));
+            txtKq.setText("phép Cộng: " + cong);
+            history.append(txtKq.getText()).append("\n");
+
             } catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
         }
@@ -380,7 +475,9 @@ public class PhepTinh extends javax.swing.JFrame {
             double num2 = Double.parseDouble(txtb.getText());
             double tru = 0;
             tru = num1 - num2;
-            txtKq.setText(tru + "");}
+             txtKq.setText("phép trừ : " + tru );
+            history.append(txtKq.getText()).append("\n");
+        }
         catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
         }
@@ -396,7 +493,9 @@ public class PhepTinh extends javax.swing.JFrame {
 
             nhan = num1 * num2;
 
-            txtKq.setText(nhan + "");}
+            txtKq.setText("phép nhân: " + nhan);
+            history.append(txtKq.getText()).append("\n");
+        }
         catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
         }
@@ -412,7 +511,8 @@ public class PhepTinh extends javax.swing.JFrame {
 
             chia = num1 / num2;
 
-            txtKq.setText(chia + "");
+            txtKq.setText("phép chia: "+chia);
+            history.append(txtKq.getText()).append("\n");
         }        
         catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
@@ -439,6 +539,7 @@ public class PhepTinh extends javax.swing.JFrame {
             } else{
                 txtKq.setText("hai số bằng nhau");
             }
+            history.append(txtKq.getText()).append("\n");
         }      
         catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
@@ -455,7 +556,8 @@ public class PhepTinh extends javax.swing.JFrame {
             String so1 = Integer.toBinaryString((int)num1);
             String so2 = Integer.toBinaryString((int)num2);
         
-            txtKq.setText(" sang he nhi phan : " + so1 + " va "+so2 );
+            txtKq.setText(" sang hệ nhị phân : " + so1 + " và "+so2 );
+            history.append(txtKq.getText()).append("\n");
         }   
         catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
@@ -471,7 +573,8 @@ public class PhepTinh extends javax.swing.JFrame {
             String so1Octal = Integer.toOctalString((int) num1);
             String so2Octal = Integer.toOctalString((int) num2);
 
-            txtKq.setText("sang he bat phan: " + so1Octal + " và " + so2Octal);
+            txtKq.setText("sang hệ bát phân: " + so1Octal + " và " + so2Octal);
+            history.append(txtKq.getText()).append("\n");
         }
         catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
@@ -487,7 +590,8 @@ public class PhepTinh extends javax.swing.JFrame {
             String so1Hex = Integer.toHexString((int) num1);
             String so2Hex = Integer.toHexString((int) num2);
 
-            txtKq.setText("sang he thap luc phan: " + so1Hex.toUpperCase() + " và " + so2Hex.toUpperCase());
+            txtKq.setText("sang hệ thập lục phân: " + so1Hex.toUpperCase() + " và " + so2Hex.toUpperCase());
+            history.append(txtKq.getText()).append("\n");
         }
         catch (NumberFormatException e) {
             txtKq.setText("Vui lòng nhập số hợp lệ!");
@@ -505,6 +609,7 @@ public class PhepTinh extends javax.swing.JFrame {
     double square2 = Math.pow(num2, 2);
 
     txtKq.setText("Bình phương: " + square1 + " và " + square2);
+    history.append(txtKq.getText()).append("\n");
 } catch (NumberFormatException e) {
     txtKq.setText("Vui lòng nhập số hợp lệ!");
 }
@@ -521,6 +626,7 @@ public class PhepTinh extends javax.swing.JFrame {
     double cube2 = Math.pow(num2, 3);
 
     txtKq.setText("Lập phương: " + cube1 + " và " + cube2);
+    history.append(txtKq.getText()).append("\n");
 } catch (NumberFormatException e) {
     txtKq.setText("Vui lòng nhập số hợp lệ!");
 }
@@ -532,6 +638,33 @@ public class PhepTinh extends javax.swing.JFrame {
         FormChinh formChinh = new FormChinh();
         formChinh.setVisible(true); 
     }//GEN-LAST:event_btnQuayLaiActionPerformed
+
+    private void btnGhifileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGhifileActionPerformed
+        // TODO add your handling code here:
+        String fileName = "CS311AAIS.txt";
+        File file = new File(fileName);
+
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+        writer.write(history.toString());
+        writer.newLine();
+        writer.flush();
+        
+        } catch (IOException e) {
+        Logger.getLogger(PhepTinh   .class.getName()).log(Level.SEVERE, "Lỗi khi ghi file", e);
+        return;
+        }
+        if (file.exists()) {
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            desktop.open(file);
+        } catch (IOException ex) {
+            Logger.getLogger(PhepTinh.class.getName()).log(Level.SEVERE, "Lỗi khi mở file", ex);
+        }
+        } else {
+        Logger.getLogger(PhepTinh.class.getName()).log(Level.WARNING, "File không tồn tại sau khi ghi");
+        }
+    }//GEN-LAST:event_btnGhifileActionPerformed
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
 
     /**
      * @param args the command line arguments
@@ -572,7 +705,12 @@ public class PhepTinh extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btbLapPhuong;
     private javax.swing.JButton btnBinhPhuong;
+<<<<<<< HEAD:src/BaiTapTH1/PhepTinh.java
     private javax.swing.JButton btnQuayLai;
+=======
+    private javax.swing.JButton btnGhifile;
+    private javax.swing.JButton btnXuatfile;
+>>>>>>> da6da50df6a6c56e0a5da1b517fa5ed274c39aa0:src/BaiTapTH1/giaodien.java
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
